@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Lopcodex — Front-End Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ================= BASE ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#0a0a0a;
+  color:#ffffff;
+  font-family:'Inter', sans-serif;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 10%;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+  font-weight:600;
+  color:#fff;
+}
+
+.badge{
+  font-size:12px;
+  padding:4px 10px;
+  border-radius:999px;
+  background:rgba(255,0,0,0.12);
+  color:#ff3b3b;
+  border:1px solid rgba(255,0,0,0.25);
+}
+
+/* HERO */
+.hero{
+  padding:90px 10%;
+}
+
+.hero h1{
+  font-size:56px;
+  font-family:'Space Grotesk', sans-serif;
+  font-weight:700;
+
+  background: linear-gradient(90deg,#ffffff,#ff3b3b,#ffffff);
+  background-size:300%;
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  animation: shine 6s linear infinite;
+  letter-spacing:-1px;
+}
+
+@keyframes shine{
+  0%{background-position:0%}
+  100%{background-position:300%}
+}
+
+.hero p{
+  margin-top:10px;
+  max-width:650px;
+  opacity:.8;
+  line-height:1.6;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:18px;
+  padding:10px 16px;
+  border-radius:10px;
+  background:#ff2e2e;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  border:none;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.btn:hover{
+  background:#ff0000;
+  transform:translateY(-2px);
+}
+
+/* SECTIONS */
+section{
+  padding:40px 10%;
+}
+
+.title{
+  font-size:13px;
+  opacity:.6;
+  margin-bottom:10px;
+  letter-spacing:1px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:16px;
+  border-radius:14px;
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(255,0,0,0.4);
+}
+
+/* CONTACT */
+.contact{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.icon{
+  color:#ff3b3b;
+  font-size:18px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  opacity:.5;
+  font-size:12px;
+}
+
+.small{
+  font-size:12px;
+  opacity:.7;
+  margin-top:6px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">Lopcodex</div>
+  <div class="badge">Open to Internships</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Front-End Developer</h1>
+
+  <p>
+    I build modern, responsive and high-performance web interfaces
+    using HTML, CSS and JavaScript. Focused on clean UI, UX and real-world applications.
+  </p>
+
+  <a class="btn" href="#projects">View Projects</a>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <div class="title">ABOUT ME</div>
+
+  <p>
+    Self-taught Front-End Developer passionate about UI/UX and modern web development.
+    Focused on building real projects with clean design and production mindset.
+  </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="title">PROJECTS (GitHub)</div>
+  <div id="repoGrid" class="grid"></div>
+</section>
+
+<!-- CV -->
+<section>
+  <div class="title">CV / RESUME</div>
+
+  <div class="card">
+    <strong>Download CV (English)</strong>
+    <p class="small">Ready for international internships.</p>
+    <a class="btn" onclick="downloadCV()">Download</a>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section>
+  <div class="title">CONTACT</div>
+
+  <div class="grid">
+
+    <div class="card contact">
+      <i class="fa-solid fa-envelope icon"></i>
+      <div>
+        Email
+        <div class="small">jplby10@gmail.com</div>
+      </div>
+      <a class="btn" href="mailto:jplby10@gmail.com">Open</a>
+    </div>
+
+    <div class="card contact">
+      <i class="fa-brands fa-github icon"></i>
+      <div>
+        GitHub
+        <div class="small">lopcodex</div>
+      </div>
+      <a class="btn" href="https://github.com/lopcodex">Open</a>
+    </div>
+
+    <div class="card contact">
+      <i class="fa-brands fa-instagram icon"></i>
+      <div>
+        Instagram
+        <div class="small">@lopcodex</div>
+      </div>
+      <a class="btn" href="https://instagram.com/lopcodex">Open</a>
+    </div>
+
+    <div class="card contact">
+      <i class="fa-brands fa-discord icon"></i>
+      <div>
+        Discord
+        <div class="small">1517174797333692436</div>
+      </div>
+      <a class="btn" href="https://discord.com/users/1517174797333692436">Open</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Lopcodex — All rights reserved
+</footer>
+
+<script>
+
+const username = "lopcodex";
+
+/* GITHUB */
+async function loadRepos(){
+  try{
+    const res = await fetch(`https://api.github.com/users/${username}/repos?sort=updated`);
+    const repos = await res.json();
+
+    const grid = document.getElementById("repoGrid");
+
+    repos.slice(0,6).forEach(repo=>{
+      const card = document.createElement("div");
+      card.className="card";
+
+      card.innerHTML=`
+        <strong>${repo.name}</strong>
+        <div class="small">${repo.language || "N/A"}</div>
+        <a class="btn" href="${repo.html_url}" target="_blank">View</a>
+      `;
+
+      grid.appendChild(card);
+    });
+
+  }catch(e){
+    console.log(e);
+  }
+}
+
+/* CV DOWNLOAD */
+function downloadCV(){
+  const blob = new Blob([
+`LOPCODEX - FRONT-END DEVELOPER
+
+Email: jplby10@gmail.com
+GitHub: github.com/lopcodex
+
+SKILLS:
+HTML, CSS, JavaScript, Responsive Design
+
+SUMMARY:
+Self-taught developer focused on UI, UX and modern web apps.
+`
+  ], {type:"text/plain"});
+
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "Lopcodex_CV.txt";
+  a.click();
+}
+
+loadRepos();
+
+</script>
+
+</body>
+</html>
